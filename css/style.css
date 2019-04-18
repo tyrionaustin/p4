@@ -1,32 +1,33 @@
-* {
-	margin: 0;
-	padding: 0;
-	border: 0;
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
 }
 
-article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
-  display:block;
+html {
+  font-size: 62.5%;
 }
 
-.container {
-  background-color: green;
-  width: 1200;
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  color: #ffffff;
+  background: #001426 url("../img/bg-pattern.png");
 }
 
-.parallax {
-  /* The image used */
-  background-image: url("images/forest.png");
-
-  /* Set a specific height */
-  height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+a {
+  color: #196a74;
+  text-decoration: none;
 }
 
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
 .cd-background-wrapper {
   background-color: #001426;
   position: relative;
@@ -79,9 +80,4 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 .no-preserve-3d .cd-floating-background {
   /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
   position: relative;
-}
-
-#about {
-  width: 1200px;
-  margin: 0 auto;
 }
