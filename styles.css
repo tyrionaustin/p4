@@ -8,10 +8,43 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
   display:block;
 }
 
+/* FOR STICKY FOOTER */
+
+.site {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.content {
+	flex-grow: 1;
+}
+
+/* END STICKY FOOTER */
+
+#about {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2%;
+	justify-content: center;
+	align-items: center;
+}
+
 nav {
-background-color: green;
+background-color: #001426;
 padding: 2% 0;
 }
+
+header {
+  background-color: green;
+}
+
 
 header nav a {
 text-decoration: none;
@@ -31,9 +64,18 @@ font-size: 2em;
 font-family: 'Roboto Condensed', sans-serif;
 }
 
+.container h1 {
+  font-size: 2em;
+}
+
+.container h2 {
+  font-size: 1.5em;
+}
+
 .container {
   background-color: green;
-  width: 1200;
+  width:1200px;
+  max-width: 100%;
 
 }
 
@@ -42,7 +84,7 @@ font-family: 'Roboto Condensed', sans-serif;
   background-image: url("images/forest.png");
 
   /* Set a specific height */
-  height: 500px;
+  height: 850px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -105,7 +147,49 @@ font-family: 'Roboto Condensed', sans-serif;
   position: relative;
 }
 
+#about img {
+	width: 250px;
+	max-width: 100%;
+}
+
 #about, #characteristics, #threats {
   width: 1200px;
   margin: 0 auto;
+}
+
+.container h1 {
+  padding: 2% 1%;
+}
+
+.container h2 {
+  padding: 1% 2%;
+}
+
+.container p {
+  padding: 1% 2%;
+}
+
+.grid {
+  padding-bottom: 2%;
+}
+
+.break {
+  height: 100px;
+}
+
+@media (min-width: 600px) {
+	figure {
+		width: 50%;
+	}
+
+
+@media (min-width: 900px) {
+  .grid figure {
+    width: 33.33%;
+  }
+
+  @media (min-width: 1200px) {
+    .grid figure {
+      width: 25%;
+    }
 }
