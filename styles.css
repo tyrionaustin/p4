@@ -8,9 +8,33 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
   display:block;
 }
 
+nav {
+background-color: green;
+padding: 2% 0;
+}
+
+header nav a {
+text-decoration: none;
+color: white;
+margin: 0 20px;
+text-align: center;
+padding: 2% 0;
+}
+
+header nav ul li {
+display: inline;
+margin: 0 auto;
+padding: 2% 0;
+text-align: center;
+text-decoration: none;
+font-size: 2em;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
 .container {
   background-color: green;
   width: 1200;
+
 }
 
 .parallax {
@@ -81,7 +105,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
   position: relative;
 }
 
-#about {
+#about, #characteristics, #threats {
   width: 1200px;
   margin: 0 auto;
 }
