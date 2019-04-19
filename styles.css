@@ -23,9 +23,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 /* END STICKY FOOTER */
 
 #about {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+	flex-grow: 1;
 }
 
 .grid {
@@ -45,6 +43,9 @@ header {
   background-color: green;
 }
 
+header img {
+  padding: 2%;
+}
 
 header nav a {
 text-decoration: none;
@@ -74,8 +75,10 @@ font-family: 'Roboto Condensed', sans-serif;
 
 .container {
   background-color: green;
+  opacity: 5%;
   width:1200px;
   max-width: 100%;
+  height: 100%;
 
 }
 
@@ -84,7 +87,7 @@ font-family: 'Roboto Condensed', sans-serif;
   background-image: url("images/forest.png");
 
   /* Set a specific height */
-  height: 850px;
+  height: 100%;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -146,7 +149,10 @@ font-family: 'Roboto Condensed', sans-serif;
   /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
   position: relative;
 }
-
+#column2 img {
+  width: 400px;
+  max-width: 100%;
+}
 #about img {
 	width: 250px;
 	max-width: 100%;
@@ -154,6 +160,7 @@ font-family: 'Roboto Condensed', sans-serif;
 
 #about, #characteristics, #threats {
   width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -173,15 +180,45 @@ font-family: 'Roboto Condensed', sans-serif;
   padding-bottom: 2%;
 }
 
+.column {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+#column1 {
+	flex: 3;
+}
+
+#column2 {
+	flex: 1;
+}
+
 .break {
   height: 100px;
+  opacity: 100%;
 }
 
 @media (min-width: 600px) {
-	figure {
+	.grid figure {
 		width: 50%;
 	}
 
+  .column {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  #column1 {
+    flex: 2;
+  }
+
+  #column2 {
+    flex: 1;
+    padding: 2%;
+  }
+}
 
 @media (min-width: 900px) {
   .grid figure {
