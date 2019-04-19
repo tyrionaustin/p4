@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
 		//check if image was previously load - if yes, trigger load event
   		if(this.complete) $(this).load();
 	});
-	
+
 	//detect mouse movement
 	$('.cd-background-wrapper').each(function(){
 		$(this).on('mousemove', function(event){
@@ -43,7 +43,7 @@ jQuery(document).ready(function($){
 	});
 
 	function initBackground() {
-		var wrapperHeight = Math.ceil(halfWindowW*2/aspectRatio), 
+		var wrapperHeight = Math.ceil(halfWindowW*2/aspectRatio),
 			proportions = ( maxRotationY > maxRotationX ) ? 1.1/(Math.sin(Math.PI / 2 - maxRotationY*Math.PI/180)) : 1.1/(Math.sin(Math.PI / 2 - maxRotationX*Math.PI/180)),
 			newImageWidth = Math.ceil(halfWindowW*2*proportions),
 			newImageHeight = Math.ceil(newImageWidth/aspectRatio),
@@ -54,7 +54,7 @@ jQuery(document).ready(function($){
 		$('.cd-background-wrapper').css({
 			'height' : wrapperHeight,
 		});
-		//set dimentions and position of the .cd-background-wrapper		
+		//set dimentions and position of the .cd-background-wrapper
 		$('.cd-floating-background').addClass('is-absolute').css({
 			'left' : newLeft,
 			'top' : newTop,
@@ -117,3 +117,16 @@ jQuery(document).ready(function($){
     document.body.removeChild(element);
 
 })();
+
+var rand_int = Math.floor(Math.random() * 4);
+var r_image = [
+	"images/2jags.jpg",
+	"images/albino.jpeg",
+	"images/black.jpg",
+	"images/regjag.jpg"
+],
+
+im = document.getElementById("jags");
+
+
+im.src = r_image[rand_int];
