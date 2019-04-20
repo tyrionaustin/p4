@@ -89,6 +89,126 @@ html {
   opacity: 1;
 }
 
+.title {
+	font-family: "Montserrat";
+	text-align: center;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: 1px;
+}
+
+.container h1 , .container h2 {
+	background-image: url("images/vortex.gif");
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+	font-size: 120px;
+	line-height: .75;
+	margin: 10px 0;
+}
+
+.nav-btn {
+    width: 26px;
+    height: 30px;
+    position: fixed;
+    display: block;
+    cursor: pointer;
+    right: 20px;
+    z-index: 999999;
+    margin-top: 10px;
+}
+.nav-btn span, .nav-btn span:before, .nav-btn span:after {
+    position: absolute;
+    height: 2px;
+    width: 26px;
+    background-color: #fff;
+    transition: all 0.2s;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+}
+.nav-btn span {
+    top: 50%;
+}
+.nav-btn span:before {
+    content: '';
+    top: -6px;
+}
+.nav-btn span:after {
+    content: '';
+    top: 6px;
+}
+.nav-btn.open span, .nav-btn.open span:before, .nav-btn.open span:after {
+    background-color: #fff;
+}
+.nav-btn.open span {
+    transform: translateX(-5px);
+    background-color: #111;
+}
+.nav-btn.open span:before, .nav-btn.open span:after {
+    transform-origin: 0 50%;
+}
+.nav-btn.open span:before {
+    transform: translateX(4px) translateY(-3px) rotate(45deg);
+}
+.nav-btn.open span:after {
+    transform: translateX(4px) translateY(3px) rotate(-45deg);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: -40%;
+    height: 100vh;
+    width: 30%;
+    max-width: 100%;
+    background-color: green;
+    transition: all 0.3s;
+    z-index: 99999;
+}
+nav ul {
+    list-style: none;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+nav ul li {
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 300px;
+
+    transition: all 0.3s ease-in-out;
+}
+nav ul li:first-child {
+    transition-delay: 0.1s;
+}
+nav ul li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+nav ul li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+nav ul li:nth-child(4) {
+    transition-delay: 0.4s;
+}
+nav.open ul li {
+    margin-left: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ddd;
+}
+nav ul li a:hover {
+    color: #fff;
+}
+
+ nav.open {
+    right: 0;
+}
 
 nav {
 background-color: #001426;
@@ -280,6 +400,13 @@ font-family: 'Roboto Condensed', sans-serif;
 @media (min-width: 900px) {
   .grid figure {
     width: 33.33%;
+  }
+
+@media screen and (max-width: 1100px) {
+       nav {
+          width: 90%;
+          right: -90%;
+      }
   }
 
   @media (min-width: 1200px) {
