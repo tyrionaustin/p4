@@ -561,6 +561,14 @@ footer p {
 	text-align: center;
 	padding: 2% 0 2% 0;
 }
+@media (max-width: 600px) {
+	.container h1 {
+		color: white;
+	}
+	.container h2 {
+		color: white;
+	}
+}
 
 @media (min-width: 600px) {
 	.grid figure {
