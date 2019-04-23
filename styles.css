@@ -273,6 +273,8 @@ font-family: 'Roboto Condensed', sans-serif;
   background-size: cover;
 }
 
+/* For homepage 3D image */
+
 .cd-background-wrapper {
   background-color: #001426;
   position: relative;
@@ -326,6 +328,8 @@ font-family: 'Roboto Condensed', sans-serif;
   /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
   position: relative;
 }
+/* end of section for 3D image */
+
 #column2 img {
   width: 400px;
   max-width: 100%;
@@ -338,6 +342,11 @@ font-family: 'Roboto Condensed', sans-serif;
 #about, #characteristics, #threats {
   width: 1200px;
   max-width: 100%;
+  margin: 0 auto;
+}
+
+.container figure {
+  padding: 1% 2%;
   margin: 0 auto;
 }
 
@@ -374,6 +383,167 @@ font-family: 'Roboto Condensed', sans-serif;
 .break {
   height: 100px;
   opacity: 100%;
+}
+
+#tooltip
+{
+    text-align: center;
+    color: #fff;
+    background: #111;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
+}
+
+    #tooltip:after /* triangle decoration */
+    {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #111;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+
+        #tooltip.top:after
+        {
+            border-top-color: transparent;
+            border-bottom: 10px solid #111;
+            top: -20px;
+            bottom: auto;
+        }
+
+        #tooltip.left:after
+        {
+            left: 10px;
+            margin: 0;
+        }
+
+        #tooltip.right:after
+        {
+            right: 10px;
+            left: auto;
+            margin: 0;
+        }
+
+/* pop up winfow section */
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+z-index: 100;
+display: none;
+}
+.cnt223 a{
+text-decoration: none;
+}
+.popup{
+width: 100%;
+margin: 0 auto;
+display: none;
+position: fixed;
+z-index: 101;
+}
+.cnt223{
+min-width: 600px;
+width: 600px;
+min-height: 150px;
+margin: 100px auto;
+background: white;
+position: relative;
+z-index: 103;
+padding: 15px 35px;
+border-radius: 5px;
+box-shadow: 0 2px 5px #000;
+}
+
+.cnt223 h1 {
+	color: green;
+	font-size: 2em;
+}
+.cnt223 p{
+clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.cnt223 p a{
+color: green;
+font-weight: bold;
+}
+.cnt223 .x{
+float: right;
+height: 35px;
+left: 22px;
+position: relative;
+top: -25px;
+width: 34px;
+}
+.cnt223 .x:hover{
+cursor: pointer;
+}
+
+/* end of popup window section */
+
+/* for button links */
+.button {
+  border-radius: 4px;
+  background-color: #001426;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*end of button links */
+
+footer p {
+	background-color: #001426;
+	color: #ffffff;
+	height: 10%;
+	text-align: center;
+	padding: 2% 0 2% 0;
 }
 
 @media (min-width: 600px) {
