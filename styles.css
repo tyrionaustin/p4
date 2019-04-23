@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+	font-family: 'Lato', sans-serif;
+}
+
 /* FOR STICKY FOOTER */
 
 .site {
@@ -90,7 +94,7 @@ html {
 }
 
 .title {
-	font-family: "Montserrat";
+	font-family: 'Cinzel', serif;
 	text-align: center;
 	color: #FFF;
 	display: flex;
